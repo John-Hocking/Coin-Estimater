@@ -9,31 +9,37 @@
 </head>
 <body>
   <div class="main">
+    <div class="row">
+      <div class='weight'>Total Coin Jar Weight</div>
+        <input type="number" id="coinweight">
+    </div>
 
     <div class='row'>
       <div class="coin">Pennies</div>
-      <input type="number" class="coincount">
+      <input type="number" class="coincount" id='pennycount'>
     </div>
 
     <div class='row'>
       <div class="coin">Nickles</div>
-      <input type="number" class="coincount">
+      <input type="number" class="coincount" id='nickelcount'>
     </div>
     <div class='row'>
       <div class="coin">Dimes</div>
-      <input type="number" class="coincount">
+      <input type="number" class="coincount" id='dimecount'>
     </div>
 
     <div class='row'>
       <div class="coin">Quarters</div>
-      <input type="number" class="coincount">
+      <input type="number" class="coincount" id='quartercount'>
     </div>
-
   </div>
 
   <div class="output">
-    <div class="calculated">Output goes here
-    </div>
+    <div id="calculated">Output goes here</div>
   </div>
+
+  <button id='calculate-button' type="submit">Calculate Dollar Amount</button>
+
 </body>
+<script src='/Coin Estimator/app.js'></script>
 </html>
