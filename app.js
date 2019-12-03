@@ -1,39 +1,37 @@
-// Coin Weights in grams
-const penny = 2.5;
-const nickel = 5;
-const dime = 2.268;
-const quarter = 5.67
-
-// How many coins fit inside each wrapper
-// const pennyCount = 50;
-// const nickelCount = 40;
-// const dimeCount = 50;
-// const quarterCount = 40;
-
-
 // Selectors
-const totalWeight = document.getElementById('coinweight')
-const pennyInput = document.getElementById('pennycount');
-const nickelInput = document.getElementById('nickelcount');
-const dimeInput = document.getElementById('dimecount');
-const quarterInput = document.getElementById('quartercount');
-const dollarOutput = document.getElementById('calculated');
-const calculateButton = document.getElementById('calculate-button')
-
-
-const coins = {
-  'penny': [2.5, 1, 12],
-  'nickel': [5, 5, pennyInput.value],
-  'dime': [2.268, 10, pennyInput.value],
-  'quarter': [5.67, 25, pennyInput.value],
-}
-
+const UIjarWeight = document.getElementById('coinweight')
+const UIpennyInput = document.getElementById('pennycount');
+const UInickelInput = document.getElementById('nickelcount');
+const UIdimeInput = document.getElementById('dimecount');
+const UIquarterInput = document.getElementById('quartercount');
+const UIdollarOutput = document.getElementById('calculated');
+const UIcalculateButton = document.getElementById('calculate-button')
 
 // Add Event Listeners
-calculateButton.addEventListener('click', printSum)
+UIcalculateButton.addEventListener('click', printSum)
 
+
+// Functions
 function printSum(){
-  let sum = parseInt(pennyInput.value) * 1 + parseInt(nickelInput.value) * 5 + parseInt(dimeInput.value) * 10 + parseInt(quarterInput.value) * 25;
-  dollarOutput.innerText = `$${sum/100}`;
+  let sum = 0;
+  let weight = 0;
+  let totalJarWeight = parseFloat(UIjarWeight.value) * 453.592;
+  const coins = {
+    //    Weight--cent amount--input Value   
+    'penny': [2.5, 1, parseInt(UIpennyInput.value)],
+    'nickel': [5, 5, parseInt(UInickelInput.value)],
+    'dime': [2.268, 10, parseInt(UIdimeInput.value)],
+    'quarter': [5.67, 25, parseInt(UIquarterInput.value)],
+  }
+
+  for(let key in coins){
+    sum += coins[key][1] * coins[key][2];
+  }
+
+  for(let key in coins){
+    weight += coins[key][0] * coins[key][2];
+  }
+
+  UIdollarOutput.innerText = `$${((sum/100 / weight) * totalJarWeight).toFixed(2)}`
 }
 

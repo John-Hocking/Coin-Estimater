@@ -1,0 +1,23 @@
+.main {
+  width: 80%;
+  margin: 0 auto;
+  border: 3px black solid;
+  /* background-color: rgb(200, 196, 196); */
+  text-align: left;
+}
+
+.row {
+  font-size: 24px;
+  margin-top: 20px;
+  /* border: 2px green solid; */
+}
+.sub {
+  font-size: 14px;
+}
+.coincount {
+  width: 70%;
+  height: 25px;
+}
+h1 {
+  text-align: center;
+}
