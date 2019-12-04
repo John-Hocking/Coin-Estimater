@@ -32,6 +32,6 @@ function printSum(){
     weight += coins[key][0] * coins[key][2];
   }
 
-  UIdollarOutput.innerText = `$${((sum/100 / weight) * totalJarWeight).toFixed(2)}`
+  UIdollarOutput.innerText = `$${((sum / 100 / weight) * totalJarWeight).toFixed(2)}`
 }
 
