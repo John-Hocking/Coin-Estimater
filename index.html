@@ -8,45 +8,50 @@
   <title>Coin Estimator by Weight</title>
 </head>
 <body>
-  <h1>Your Coin Jar Information</h1>
+  <div class='container'>
+      <h1>Your Coin Jar Information</h1>
+    <div class="main">
+      
+      <div class="row">
+        <div class='coin'>Total Coin Jar Weight</div>
+          <input type="number" class='coincount' id="coinweight">
+          <div class='sub'>The weight of the coin jar (lbs)</div>
+      </div>
 
-  <div class="main">
-    <div class="row">
-      <div class='weight'>Total Coin Jar Weight</div>
-        <input type="number" class='coincount' id="coinweight">
-        <div class='sub'>The weight of the coin jar (lbs)</div>
+      <div class='row'>
+        <div class="coin">Pennies</div>
+        <input type="number" class="coincount" id='pennycount'>
+        <div class='sub'>How many pennies are in your handful?</div>
+      </div>
+
+      <div class='row'>
+        <div class="coin">Nickles</div>
+        <input type="number" class="coincount" id='nickelcount'>
+        <div class='sub'>How many nickels are in your handful?</div>
+      </div>
+      <div class='row'>
+        <div class="coin">Dimes</div>
+        <input type="number" class="coincount" id='dimecount'>
+        <div class='sub'>How many dimes are in your handful?</div>
+      </div>
+
+      <div class='row'>
+        <div class="coin">Quarters</div>
+        <input type="number" class="coincount" id='quartercount'>
+        <div class='sub'>How many quarters are in your handful?</div>
+      </div>
+
+      <div class="output">
+        <div id="calculated"></div>
+      </div>
+      
+      <div class='button-container'>
+        <button id='calculate-button' type="submit">Calculate Dollar Amount</button>
+        <button id="reset" type='reset'>Reset</button>
     </div>
-
-    <div class='row'>
-      <div class="coin">Pennies</div>
-      <input type="number" class="coincount" id='pennycount'>
-      <div class='sub'>How many pennies are in your handful?</div>
-    </div>
-
-    <div class='row'>
-      <div class="coin">Nickles</div>
-      <input type="number" class="coincount" id='nickelcount'>
-      <div class='sub'>How many nickels are in your handful?</div>
-    </div>
-    <div class='row'>
-      <div class="coin">Dimes</div>
-      <input type="number" class="coincount" id='dimecount'>
-      <div class='sub'>How many dimes are in your handful?</div>
-    </div>
-
-    <div class='row'>
-      <div class="coin">Quarters</div>
-      <input type="number" class="coincount" id='quartercount'>
-      <div class='sub'>How many quarters are in your handful?</div>
-    </div>
-
-    <div class="output">
-      <div id="calculated">Output goes here</div>
-    </div>
-
-    <button id='calculate-button' type="submit">Calculate Dollar Amount</button>
-
+      
   </div>
+</div>
 
 
 </body>
